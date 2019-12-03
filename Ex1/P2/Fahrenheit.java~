@@ -1,0 +1,10 @@
+import jeliot.io.*;
+
+class f2c{
+      public static void main(String[] args){
+      	     int fah=97;
+	     int cel;
+
+	     cel = ( 5 / 9 ) * ( fah - 32 );
+      }
+}

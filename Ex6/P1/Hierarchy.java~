@@ -1,0 +1,56 @@
+class Shape {
+  private String name;
+  public Shape(String name) { 
+      this.name = name;
+  }
+  public Shape() {
+      name = "no name";
+  }
+  public String getName() {
+      return name;
+  }
+  public String toString() {
+      return getClass().getName() + " " + name;
+  }
+}
+class Circle extends Shape{
+    private double r;
+    public Rad(double rad){
+	return r = rad;
+    }
+    public String toString() {
+      return getClass().getName() + " " + name;
+    }
+}
+class Rectangle extends Shape{
+    private double adjacent_side, l_side, s_side;
+    public Rectangle(double l_side){
+	return adjacent_side = 2*l_side + 2*s_side;
+    }
+    public String toString() {
+      return getClass().getName() + " " + name;
+    }
+}
+
+class Parallelogram extends Rectangle{
+    private double side, l_side, s_side;
+    public Parallelogram(double l_side, double s_side){
+	return side = 2*l_side + 2*s_side;
+    }
+    public String toString() {
+      return getClass().getName() + " " + name;
+    }
+}
+
+class Square extends Rectangle{
+    private double side;
+    public Square(double side){
+	this.side = 4*side;
+    }
+    public String toString() {
+      return getClass().getName() + " " + name;
+    }
+}
+
+
+

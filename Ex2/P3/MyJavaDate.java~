@@ -1,0 +1,8 @@
+class MyJavaDate{
+    public class Date{
+	Date now = new Date();
+    }
+    public static void main(String[] args){
+	System.out.println("Nice to see you, Kumamoto-san!!. It is"+ now);
+    }
+}

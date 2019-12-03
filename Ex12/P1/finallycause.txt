@@ -1,0 +1,10 @@
+1.  Why does the program print the two lines below?
+(1)ループで２回目の時[Count]が２になった時例外処理を実行するため。
+(2)finalyはtry分岐の時は必ず実行されるため
+
+2. Why does the program print the line below (It looks like the program does not print the line becuase of the break statement)?
+breakが起こってもtry分岐でfinallyが存在すればbreakした後でもfinallyの処理を実行するため
+
+3. Why does the program print the line below?
+ループの外側に System.out.println("Main program ends");が存在するため。
+

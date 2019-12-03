@@ -1,0 +1,22 @@
+import java.io.*;
+
+public class ReadStringFromFile{
+    public static void main(String[] arg){
+	File file = new File("input.txt");
+	int ch;
+
+	try{
+	    FileInputStream fin = new FileInputStream(file);
+	    while((ch = fin.read()) != -1){
+		System.out.println((char)ch);
+	    }
+	    fin.close();
+	}catch(FileNotFoundException e){
+	    System.out.println("File" + file.getAbsolutePath() +
+			       "could not be found on filesystem....");
+	}catch(IOException ioe){
+	    System.out.println("Exception while reading the file" + ioe);
+	}
+	System.out.println("\n Program is finished.");
+    }
+}

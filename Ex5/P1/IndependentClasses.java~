@@ -1,0 +1,74 @@
+class Rectangle{
+    private double height;
+    private double length;
+    
+    //cons
+    Rectangle(double height, double length){
+	this.height = height;
+	this.length = length;
+    }
+
+    //meth
+    void getheight(){
+	System.out.println("Height: " + height);
+    }
+    void getlength(){
+	System.out.println("Length: " + length);
+    }
+    void get_cirum(){
+	System.out.println("Cirum: " + (height*2 + length*2));
+    }
+}
+
+class Box{
+    private double height;
+    private double width;
+    private double length;
+
+    Box(double height, double length, double width){
+	this.height = height;
+	this.width = width;
+	this.length = length;
+    }
+
+    void get_cirum(){
+	System.out.println("Cirum: " +  (height*4 + length*4 + width*4));
+    }
+    void getheight(){
+	System.out.println("Height: " + height);
+    }
+    void getlength(){
+	System.out.println("Length: " + length);
+    }
+    void getwidth(){
+	System.out.println("Width: " + width);
+    }
+}
+
+class TestObject{
+    public static void main(String[] args){
+	Rectangle rec1 = new Rectangle(5, 8);
+	Box box1 = new Box(5, 8, 3);
+
+	rec1.getheight();
+	rec1.getlength();
+	rec1.get_cirum();
+	box1.getheight();
+	box1.getlength();
+	box1.getwidth();
+	box1.get_cirum();
+    }
+}
+
+//How many fields does the Rectangle have?
+//2
+//How many fields does the Box have?
+//3
+//How many methods does the Rectangle have?
+//3
+//How many methods does the Box have?
+//4
+//Are there any fields with the same meaning in the Rectangle and Box classes?
+//一部かぶっている
+//Are there any methods in the Rectangle and Box classes expressing similar behavior?
+//似ている部分がある。

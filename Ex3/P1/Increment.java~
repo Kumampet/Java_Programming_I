@@ -1,0 +1,16 @@
+class PrePostDemo{
+    public static void main(String[] args){
+	int i = 3;
+
+	i++;//iをインクリメント→４になる
+	System.out.println(i);//"4"が表示される
+
+	++i;//iをインクリメント→5になる
+	System.out.println(i);//"5"が表示される
+
+	System.out.println(++i);//iをインクリメントしてから表示→５が６になる
+	System.out.println(i++);//iを表示してからインクリメント→6を表示してから７に増やす
+
+	System.out.oprintln(i);//"7"を表示
+    }
+}

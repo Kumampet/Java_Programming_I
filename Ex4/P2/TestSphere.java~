@@ -1,0 +1,40 @@
+class Sphere{
+    double radius;
+    double volume;
+
+    //constructor
+    Sphere(double radius){
+	this.radius = radius;
+    }
+    
+    //method
+    void Getrad(){
+	System.out.println("Radius: " + radius);
+    }
+    void Volume(){
+	System.out.println("Volume: " + (4/3 * radius * Math.PI));
+    }
+    void Getheight(double h1, double h2){
+	System.out.println("ContactPoint: " + ((2 * h1 * h2) / ( h1 + h2)));
+    }
+}
+
+class TestSphere{
+    public static void main(String[] args){
+	Sphere sph1 = new Sphere(6);
+	Sphere sph2 = new Sphere(6);
+	Sphere sph3 = new Sphere(9);
+
+	sph1.Getrad();
+	sph1.Volume();
+	sph2.Getrad();
+	sph2.Volume();
+	sph3.Getrad();
+	sph3.Volume();
+
+	sph1.Getheight(sph1.radius, sph2.radius);
+	sph1.Getheight(sph1.radius, sph3.radius);
+	sph1.Getheight(sph2.radius, sph3.radius);
+    }
+    
+}

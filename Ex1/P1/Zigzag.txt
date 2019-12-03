@@ -1,0 +1,20 @@
+#What is the difference between “/” and “%” operators?
+      "/"は整数の割り算。あまりは切り捨て。
+      "%"は余剰算。余を求める。
+#What is the Step button for?
+      プログラムの進行を一手順ごとに進める
+#What is the Play button for?
+      プログラムの進行を連続して進める。
+#What is the Pause button for?
+      プログラムの進行を一時停止する。
+#Is the value of the number variable equal to the value of the zigzag variable after execution of the program?
+      number=123
+      zigzag=321
+      桁の頭尾が入れ替わる
+#You should explain how the least significant digit of the value of the zigzag variable was calculated.
+     number変数の百の位を抽出して、zigzag変数の一の位に持って行った。
+     numberを１００で割って百の位を抽出する。
+     numberを１００で割った余を１０で割って十の位を抽出する。
+     numberを１００で割った余りを１０で割った余りを一の位とする
+     これらを逆順に１００倍、１０倍、１倍にして足して逆順の整数にする。
+     

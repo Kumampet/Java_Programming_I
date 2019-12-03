@@ -1,0 +1,19 @@
+public class PrimitiveCall { 
+  public static void myMethod(int n) { 
+     System.out.println("myMethod: n= " + n); //２回目
+     n = 100; 
+     System.out.println("myMethod: n= " + n); 
+   } // myMethod() 
+
+   public static void main(String argv[]) { 
+     int k = 5; 
+     System.out.println("main: k= " + k); //１回目
+     myMethod(k); 
+     System.out.println("main: k= " + k);
+   } // main() 
+} // PrimitiveCall
+
+プログラムで最初に実行されるのは、main関数であるからmain関数内の最初のprintlnが実行される。この時kの値は５で初期化されているので、当然最初は５が出力される。
+その直後にmyMethod(k)があり、myMethodにkの中身の５を渡してnに代入している。よって２回目はmyMethod内の最初のprintlnが実行され５が出力される。直後にn=100となり次のprintlnは100が出力されている。
+
+結局最終的にはkの値は変更されていないので、kの値は変わらない。

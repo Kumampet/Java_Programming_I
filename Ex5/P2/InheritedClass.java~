@@ -1,0 +1,69 @@
+class Rectangle{
+   double height;
+   double length;
+   double cirum;
+    
+    //cons
+    Rectangle(double h, double l){
+	height = h;
+	length = l;
+    }
+
+    //meth
+    void getheight(){
+	System.out.println("Height: " + height);
+    }
+    void getlength(){
+	System.out.println("Length: " + length);
+    }
+    private void get_cirum(){
+	cirum = height*2 + length*2;
+	System.out.println("Cirum: " + cirum);
+    }
+}
+
+class Box extends Rectangle{
+    private double width;
+
+    Box(double h, double w, double l){
+	height = h;
+	width = w;
+	length = l;
+    }
+
+    void get_cirum(){
+	cirum = height*4 + length*4 + width*4;
+	System.out.println("Cirum: " + cirum);
+    }
+    void getwidth(){
+	System.out.println("Width: " + width);
+    }
+}
+
+class TestObject{
+    public static void main(String[] args){
+	Rectangle rec1 = new Rectangle();
+	Box box1 = new Box();
+
+	rec1.getheight();
+	rec1.getlength();
+	rec1.get_cirum();
+	box1.getheight();
+	box1.getlength();
+	box1.getwidth();
+	box1.get_cirum();
+    }
+}
+
+//How many fields does the Rectangle have?
+//3
+//How many fields does the Box have?
+//4
+//How many methods does the Rectangle have?
+//2
+//How many methods does the Box have?
+//2
+//Are there any fields with the same meaning in the Rectangle and Box classes?
+//完全に一致ではないが一部かぶっている
+//Are there any methods in the Rectangle and Box classes expressing similar behavior?
+//同じく完全に一致していないが、似ている部分がある。

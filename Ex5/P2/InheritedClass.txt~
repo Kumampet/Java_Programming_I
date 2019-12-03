@@ -1,0 +1,70 @@
+////Can you design inherited classes?
+//できる
+//You have two classes: Rectangle and Box. Which one should be a base class?
+//Rectangeleクラスをスーパークラスに
+
+class Rectangle{
+    double height;
+    double length;
+    double cirum;
+    
+    //cons
+    Rectangle(){
+	height = 5;
+	length = 8;
+    }
+
+    //meth
+    void get_cirum(double height, double length){
+	cirum = height*2 + length*2;
+	System.out.println("Cirum: " + cirum);
+    }
+    void call_side(double h, double l){
+	System.out.println("Height: " + h);
+	System.out.println("Length: " + l);
+    }
+}
+
+class Box extends Rectangle{
+    private double width;
+
+    public Box(){
+	height = 4;
+	width = 2;
+	length = 8;
+    }
+
+    void get_cirum(double h, double l, double w){
+	cirum = h*4 + l*4 + w*4;
+	System.out.println("Cirum: " + cirum);
+    }
+    void call_side(double h, double l, double w){
+	System.out.println("Height: " + h);
+	System.out.println("Length: " + l);
+	System.out.println("Width: " + w);
+    }
+}
+
+class TestObject{
+    public static void main(String[] args){
+	Rectangle rec1 = new Rectangle();
+	Box box1 = new Box();
+
+	rec1.get_cirum(5,8);
+	rec1.call_side(5,8);
+	box1.get_cirum(4,2,8);
+	box1.call_side(4,2,8);
+    }
+}
+
+//How many fields does the Rectangle have?
+//3
+//How many fields does the Box have?
+//1
+//How many methods does the Rectangle have?
+//2
+//How many methods does the Box have?
+//2
+//What are the advantages that the solution to Problem 2 has over the solution to Problem 1.
+//フィールドの宣言を減らせる
+//
